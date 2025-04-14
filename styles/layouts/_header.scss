@@ -1,0 +1,73 @@
+@use '../utils/mixins' as m;
+@use '../utils/variables' as v;
+
+// Header styling
+.header {
+  background: v.$color-light-gray;
+  position: relative;
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .dropdown {
+      display: none;
+      color: #676766;
+      border: 1px solid v.$color-gray;
+      padding: 0.25rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &__navbarlist {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+
+    a {
+      color: v.$color-gray;
+
+      &:hover {
+        cursor: pointer;
+        color: v.$color-accent-yellow;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    a {
+      @include m.button-size();
+      @include m.button-color($background: inherit);
+
+      &:hover {
+        @include m.button-color(v.$color-white, v.$color-accent-teal);
+      }
+    }
+
+    .active {
+      @include m.button-color(v.$color-white, v.$color-accent-teal);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use '../utils/mixins' as m;
+@use '../utils/variables' as v;
+
+/* Card section styling */
+.cards {
+  margin-top: -4rem;
+  padding-bottom: 4rem;
+
+  &__wrap {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding: 1.5rem;
+    background: v.$color-white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    p {
+      color: v.$color-gray;
+      padding-bottom: 1.5rem;
+      margin-bottom: 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: v.$color-accent-yellow;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 50px;
+      }
+    }
+
+    &:hover {
+
+      background: v.$color-accent-teal;
+
+      .cards__heading {
+        color: v.$color-accent-yellow;
+      }
+
+      p {
+        color: v.$color-white;
+      }
+    }
+  }
+
+  &__heading {
+    display: inline-block;
+    color: v.$color-accent-teal;
+    margin-bottom: 1.5rem;
+
+    font: {
+      family: "Bebas";
+      size: 2rem;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

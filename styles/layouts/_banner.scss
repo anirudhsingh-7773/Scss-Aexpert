@@ -1,0 +1,82 @@
+@use '../utils/mixins' as m;
+@use '../utils/variables' as v;
+
+.banner {
+
+  background: v.$color-light-gray;
+
+  &__content {
+    padding-bottom: 6rem;
+  }
+
+  &__primaryheading {
+    font: {
+      family: "Bebas";
+      size: 5rem;
+    }
+
+    color: v.$color-dark-gray;
+    line-height: 1;
+  }
+
+  &__secondaryheading {
+    font-size: 1rem;
+    position: relative;
+    left: 3.5rem;
+    font-weight: 600;
+    color: v.$color-accent-teal;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: "";
+      width: 2.5rem;
+      height: 3px;
+      background-color: v.$color-accent-yellow;
+      position: absolute;
+      top: 50%;
+      left: -3.5rem;
+    }
+  }
+
+  &__text {
+    color: v.$color-gray;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    @include m.button-size();
+    @include m.button-color(v.$color-white, $background: v.$color-accent-teal);
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    color: v.$color-gray;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 4rem;
+
+    a:hover {
+      color: v.$color-accent-yellow;
+    }
+
+    li {
+      position: relative;
+    }
+
+    li:nth-of-type(1)::after,
+    li:nth-of-type(2)::after,
+    li:nth-of-type(4)::after,
+    li:nth-of-type(5)::after {
+      @include m.point-style();
+    }
+  }
+
+  &__image {
+    height: 100%;
+    align-self: flex-end;
+  }
+}
