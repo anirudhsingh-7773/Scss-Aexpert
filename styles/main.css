@@ -26,31 +26,31 @@ img {
 
 @font-face {
   font-family: "Bebas";
-  src: url(/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+  src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
 }
 @font-face {
   font-family: "Lato";
-  src: url(/fonts/Lato/Lato-Thin.ttf);
+  src: url(../fonts/Lato/Lato-Thin.ttf);
   font-weight: 200;
 }
 @font-face {
   font-family: "Lato";
-  src: url(/fonts/Lato/Lato-Light.ttf);
+  src: url(../fonts/Lato/Lato-Light.ttf);
   font-weight: 300;
 }
 @font-face {
   font-family: "Lato";
-  src: url(/fonts/Lato/Lato-Regular.ttf);
+  src: url(../fonts/Lato/Lato-Regular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: "Lato";
-  src: url(/fonts/Lato/Lato-Black.ttf);
+  src: url(../fonts/Lato/Lato-Black.ttf);
   font-weight: 500;
 }
 @font-face {
   font-family: "Lato";
-  src: url(/fonts/Lato/Lato-Bold.ttf);
+  src: url(../fonts/Lato/Lato-Bold.ttf);
   font-weight: 600;
 }
 .header {
