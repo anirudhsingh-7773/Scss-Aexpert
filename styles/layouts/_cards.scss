@@ -3,8 +3,7 @@
 
 /* Card section styling */
 .cards {
-  margin-top: -4rem;
-  padding-bottom: 4rem;
+  transform: translateY(-4rem);
 
   &__wrap {
     max-width: 80%;
