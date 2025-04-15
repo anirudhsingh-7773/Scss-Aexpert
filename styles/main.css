@@ -131,6 +131,7 @@ img {
   line-height: 1;
 }
 .banner__secondaryheading {
+  width: fit-content;
   font-size: 1rem;
   position: relative;
   left: 3.5rem;
