@@ -1,67 +1,66 @@
-@use '../utils/mixins' as m;
-@use '../utils/variables' as v;
+@use '../utils' as *;
 
 .banner {
 
-  background: v.$color-light-gray;
+  background: $color-light-gray;
 
   &__content {
-    padding-bottom: 6rem;
+    padding-bottom: size(24);
   }
 
   &__primaryheading {
     font: {
       family: "Bebas";
-      size: 5rem;
+      size: size(20);
     }
 
-    color: v.$color-dark-gray;
+    color: $color-dark-gray;
     line-height: 1;
   }
 
   &__secondaryheading {
     width: fit-content;
-    font-size: 1rem;
+    font-size: size(4);
     position: relative;
-    left: 3.5rem;
+    left: size(14);
     font-weight: 600;
-    color: v.$color-accent-teal;
-    margin-bottom: 1rem;
+    color: $color-accent-teal;
+    margin-bottom: size(4);
 
     &::before {
       content: "";
-      width: 2.5rem;
+      width: size(9);
       height: 3px;
-      background-color: v.$color-accent-yellow;
+      background-color: $color-accent-yellow;
       position: absolute;
       top: 50%;
-      left: -3.5rem;
+      left: size(-14);
     }
   }
 
   &__text {
-    color: v.$color-gray;
+    color: $color-gray;
     width: 90%;
-    margin-bottom: 2rem;
+    margin-bottom: size(8);
   }
 
   &__button {
-    @include m.button-size();
-    @include m.button-color(v.$color-white, $background: v.$color-accent-teal);
-    margin-bottom: 2rem;
+    @include button-size();
+    @include button-color($color-white, $background: $color-accent-teal);
+    margin-bottom: size(8);
   }
 
   &__links {
     margin: 0;
     padding: 0;
-    color: v.$color-gray;
+    color: $color-gray;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 4rem;
+    gap: size(4) size(16);
 
     a:hover {
-      color: v.$color-accent-yellow;
+      color: $color-accent-yellow;
     }
 
     li {
@@ -72,12 +71,22 @@
     li:nth-of-type(2)::after,
     li:nth-of-type(4)::after,
     li:nth-of-type(5)::after {
-      @include m.point-style();
+      @include point-style();
     }
   }
 
   &__image {
     height: 100%;
     align-self: flex-end;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner {
+    &__links {
+      li::after {
+        @include point-style();
+      }
+    }
   }
 }

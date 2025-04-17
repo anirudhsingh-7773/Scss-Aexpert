@@ -1,22 +1,21 @@
-@use '../utils/mixins' as m;
-@use '../utils/variables' as v;
+@use '../utils' as *;
 
 // Header styling
 .header {
-  background: v.$color-light-gray;
+  background: $color-light-gray;
   position: relative;
 
   &__navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: size(4) 0;
 
     .dropdown {
       display: none;
       color: #676766;
-      border: 1px solid v.$color-gray;
-      padding: 0.25rem;
+      border: 1px solid $color-gray;
+      padding: size(1);
       border-radius: 5px;
       cursor: pointer;
       margin-right: 0;
@@ -44,14 +43,14 @@
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 2rem;
+    gap: size(8);
 
     a {
-      color: v.$color-gray;
+      color: $color-gray;
 
       &:hover {
         cursor: pointer;
-        color: v.$color-accent-yellow;
+        color: $color-accent-yellow;
       }
     }
   }
@@ -60,16 +59,62 @@
     display: flex;
 
     a {
-      @include m.button-size();
-      @include m.button-color($background: inherit);
+      @include button-size();
+      @include button-color($background: inherit);
 
       &:hover {
-        @include m.button-color(v.$color-white, v.$color-accent-teal);
+        @include button-color($color-white, $color-accent-teal);
       }
     }
 
     .active {
-      @include m.button-color(v.$color-white, v.$color-accent-teal);
+      @include button-color($color-white, $color-accent-teal);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+
+    .dropdown {
+      display: block;
+    }
+
+    &__wrap {
+      position: static;
+    }
+
+    &__logo {
+      position: static;
+      transform: translate(0);
+    }
+
+    &__toggle {
+      border: 2px solid $color-accent-yellow;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      background: $color-light-gray;
+      padding: size(4) 0;
+    }
+
+    &__toggle.show {
+      opacity: 1;
+      height: auto;
+    }
+
+    &__navbarlist {
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+
+      a {
+        padding: size(4) 0;
+      }
     }
   }
 }

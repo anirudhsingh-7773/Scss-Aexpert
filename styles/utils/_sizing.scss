@@ -1,0 +1,5 @@
+$size-unit: 0.25rem;
+
+@function size($step) {
+  @return $size-unit * $step;
+}

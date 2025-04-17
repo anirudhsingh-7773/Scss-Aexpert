@@ -1,4 +1,5 @@
-@use 'variables' as v;
+@use 'colors' as *;
+@use 'sizing' as *;
 
 // mixin for changing button color
 @mixin button-color($color: #676766, $background) {
@@ -8,8 +9,8 @@
 
 // mixin for setting button sizes
 @mixin button-size() {
-  padding: 1rem 2rem;
-  border-radius: 50px;
+  padding: size(4) size(8);
+  border-radius: size(16);
 }
 
 // mixin to create bullet point
@@ -18,9 +19,9 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background: v.$color-accent-yellow;
+  background: $color-accent-yellow;
   border-radius: 50%;
   top: 50%;
   transform: translate(50%, -35%);
-  right: -2rem;
+  right: size(8);
 }

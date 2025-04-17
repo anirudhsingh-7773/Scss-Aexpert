@@ -1,0 +1,48 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+// Extra small devices
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+// Small devices
+@media (min-width: 576px) and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+// Medium devices
+@media (min-width: 768px) and (max-width: 992px) {
+
+  html {
+    font-size: 14px;
+  }
+}
+
+// Large devices
+@media (min-width: 992px) and (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
