@@ -90,3 +90,11 @@
     }
   }
 }
+
+@media (min-width: 1400px) {
+  .banner {
+    &__links {
+      max-width: 60%;
+    }
+  }
+}

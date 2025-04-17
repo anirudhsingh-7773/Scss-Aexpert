@@ -243,7 +243,7 @@ img {
   border-radius: 50%;
   top: 50%;
   transform: translate(50%, -35%);
-  right: 2rem;
+  right: -2rem;
 }
 .banner__image {
   height: 100%;
@@ -260,7 +260,12 @@ img {
     border-radius: 50%;
     top: 50%;
     transform: translate(50%, -35%);
-    right: 2rem;
+    right: -2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .banner__links {
+    max-width: 60%;
   }
 }
 /* Card section styling */
