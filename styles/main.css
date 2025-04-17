@@ -287,16 +287,7 @@ img {
   padding-bottom: 1.5rem;
   margin-bottom: 0;
   position: relative;
-}
-.cards__item p::after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  background-color: #ffba0c;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 2rem;
+  border-bottom: 3px solid #ffba0c;
 }
 .cards__item:hover {
   background: #007a82;

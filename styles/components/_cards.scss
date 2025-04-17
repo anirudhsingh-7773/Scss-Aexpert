@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+@mixin card {
+  padding: size(6);
+  background: $color-white;
+  box-shadow: 0 0 size(8) rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@mixin card-heading {
+  max-width: 20%;
+  color: $color-accent-teal;
+  margin-bottom: size(6);
+
+  font: {
+    family: "Bebas";
+    size: size(8);
+  }
+}
+
+@mixin card-text {
+  color: $color-gray;
+  padding-bottom: size(6);
+  margin-bottom: 0;
+  position: relative;
+  border-bottom: 3px solid $color-accent-yellow;
+}
